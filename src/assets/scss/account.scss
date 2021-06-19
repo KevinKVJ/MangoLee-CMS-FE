@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
+input {
+    font-size: inherit;
+}
+
+#login-screen {
+    height: 100vh;
+
+    background: #4d8bff;
+    font-size: 100px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
