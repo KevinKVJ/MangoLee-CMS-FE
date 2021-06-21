@@ -1,0 +1,195 @@
+* {
+    box-sizing: border-box;
+    // outline: 1px solid blue;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#mainmain {
+    max-width: 1920px;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: skyblue;
+}
+
+#top-bar {
+    width: auto;
+    height: 70px;
+    background-color: #fff;
+    display: flex;
+
+    .top-bar_left {
+        width: 280px;
+        flex-shrink: 0;
+        height: 70px;
+        padding: 10px 30px;
+        border-bottom: 1px solid grey;
+        // outline: 1px solid;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .title {
+            font-size: 28px;
+            // float: right;
+            // margin-bottom: 2px;
+            // margin-right: 20px;
+            // transform: translateY(-2px);
+        }
+        i {
+            // float: left;
+            vertical-align: middle;
+            font-size: 30px;
+            line-height: 30px;
+        }
+    }
+
+    .top-bar_mid {
+        min-width: 300px;
+        height: 70px;
+        flex-grow: 3;
+        flex-shrink: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 25px;
+        .search-bar {
+            position: relative;
+            i {
+                position: absolute;
+                font-size: 16px;
+                color: #a9acae;
+                top: 50%;
+                left: 15px;
+                transform: translateY(-55%);
+            }
+        }
+
+        input {
+            width: 100%;
+            background-color: #f5f6f8;
+            height: 40px;
+            font-size: 16px;
+            border-radius: 20px;
+
+            padding: 0 35px;
+            padding-right: 15px;
+            border: none;
+            outline: none;
+        }
+    }
+    .top-bar_right {
+        width: 180px;
+        height: 70px;
+        padding-right: 10px;
+        outline: 2px solid blue;
+        flex-grow: 1;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        > .reminder-icon {
+            position: relative;
+            i {
+                font-size: 24px;
+            }
+            .reminder-area {
+                position: absolute;
+                top: -3px;
+                right: -3px;
+
+                background-color: red;
+                width: 17px;
+                height: 17px;
+                border-radius: 50%;
+                color: #fff;
+                .reminder-area-counter {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-55%, -50%);
+                }
+            }
+        }
+
+        > .user-bar {
+            margin-left: 35px;
+            display: flex;
+            align-items: center;
+
+            .user-bar_label{
+                font-size: 0.16rem;
+            }
+
+            > .user-bar_avatar {
+                margin-left: 12px;
+                background-color: red;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+.main-area {
+    // position: absolute;
+    // top: 0;
+    // right: 0;
+    // left: 0;
+    // bottom: 0;
+    // background-color: red;
+
+    #side-bar {
+        position: fixed;
+        min-width: 220px;
+        background-color: #fff;
+        // border: 1px solid transparent;
+        padding: 10px 0;
+        height: 100vh;
+        overflow-y: auto;
+
+        .side-bar_title {
+            border: 1px solid transparent;
+            width: 100%;
+            // margin-top: 15px;
+            // margin-left: 10px;
+
+            i {
+                // transform: translateX(80px);
+                font-size: 25px;
+                // margin-top: 2px;
+                display: block;
+                float: right;
+            }
+        }
+
+        .options {
+            li {
+                // position: relative;
+                padding: 12px 22px;
+                // margin-top: 20px;
+                // font-size: 17px;
+                span {
+                    margin-left: 20px;
+                    vertical-align: middle;
+                    font-size: 16px;
+                }
+                
+                i {
+                    font-size: 20px;
+                    vertical-align: middle;
+                    // line-height: 30px;
+                }
+            }
+        }
+    }
+    #content-area {
+        float: right;
+    }
+}

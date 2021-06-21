@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Account from '../views/Account.vue'
+import AdminPage from '../views/AdminPage.vue'
 
 import Login from '@/components/signin_signup/Login.vue'
 
@@ -18,6 +19,11 @@ const routes = [
         component: () => import('@/components/signin_signup/CreateNewAccount.vue')
       }
     ]
+  },
+  {
+    path:'/admin',
+    name: 'Admin',
+    component: AdminPage
   }
   // ,{
   //   path: '/about',
